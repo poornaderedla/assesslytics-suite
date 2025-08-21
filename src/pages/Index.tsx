@@ -2,10 +2,14 @@ import Navigation from "@/components/Navigation";
 import SearchSection from "@/components/SearchSection";
 import FeaturedSection from "@/components/FeaturedSection";
 import AssessmentCard from "@/components/AssessmentCard";
+import Footer from "@/components/Footer";
 import { sampleAssessments } from "@/data/assessments";
 import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Grid, List, SlidersHorizontal } from "lucide-react";
+import { Shield, Users, Award, Globe, Clock, Star } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const Index = () => {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
@@ -105,6 +109,152 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+      {/* Trust & Credibility Section */}
+      <div className="py-16 bg-gradient-subtle">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-heading mb-4">Trusted by Millions Worldwide</h2>
+            <p className="text-foreground-soft max-w-2xl mx-auto">
+              Join over 2 million users who trust AssessmentHub for their personal and professional development journey.
+            </p>
+          </div>
+
+          {/* Trust Statistics */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">2M+</div>
+              <div className="text-foreground-soft">Active Users</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">300+</div>
+              <div className="text-foreground-soft">Expert Assessments</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">4.8★</div>
+              <div className="text-foreground-soft">Average Rating</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">50+</div>
+              <div className="text-foreground-soft">Countries Served</div>
+            </div>
+          </div>
+
+          {/* Trust Features */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="text-center p-6 hover:shadow-elegant transition-shadow">
+              <CardContent className="p-0">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary-soft rounded-full mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="font-semibold text-heading mb-2">Secure & Private</h3>
+                <p className="text-sm text-foreground-soft">
+                  Bank-level security with complete data privacy protection
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6 hover:shadow-elegant transition-shadow">
+              <CardContent className="p-0">
+                <div className="flex items-center justify-center w-16 h-16 bg-secondary-soft rounded-full mx-auto mb-4">
+                  <Users className="w-8 h-8 text-secondary" />
+                </div>
+                <h3 className="font-semibold text-heading mb-2">Expert Validated</h3>
+                <p className="text-sm text-foreground-soft">
+                  Developed by psychologists and industry professionals
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6 hover:shadow-elegant transition-shadow">
+              <CardContent className="p-0">
+                <div className="flex items-center justify-center w-16 h-16 bg-highlight-soft rounded-full mx-auto mb-4">
+                  <Award className="w-8 h-8 text-highlight" />
+                </div>
+                <h3 className="font-semibold text-heading mb-2">Industry Leading</h3>
+                <p className="text-sm text-foreground-soft">
+                  Trusted by Fortune 500 companies and top universities
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center p-6 hover:shadow-elegant transition-shadow">
+              <CardContent className="p-0">
+                <div className="flex items-center justify-center w-16 h-16 bg-primary-soft rounded-full mx-auto mb-4">
+                  <Globe className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="font-semibold text-heading mb-2">Global Reach</h3>
+                <p className="text-sm text-foreground-soft">
+                  Available in 25+ languages across 50+ countries
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+
+      {/* Testimonials */}
+      <div className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-heading text-center mb-12">
+            What Our Users Say
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="p-6 hover:shadow-elegant transition-shadow">
+              <CardContent className="p-0">
+                <div className="flex items-center mb-4">
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                </div>
+                <p className="text-foreground-soft mb-4 italic">
+                  "AssessmentHub helped me understand my leadership style and improved my team management significantly."
+                </p>
+                <div className="font-semibold text-heading">Sarah Chen</div>
+                <div className="text-sm text-foreground-soft">VP of Engineering, TechCorp</div>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 hover:shadow-elegant transition-shadow">
+              <CardContent className="p-0">
+                <div className="flex items-center mb-4">
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                </div>
+                <p className="text-foreground-soft mb-4 italic">
+                  "The career aptitude test gave me clarity on my path. I switched careers and couldn't be happier!"
+                </p>
+                <div className="font-semibold text-heading">Marcus Rodriguez</div>
+                <div className="text-sm text-foreground-soft">Software Developer</div>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 hover:shadow-elegant transition-shadow">
+              <CardContent className="p-0">
+                <div className="flex items-center mb-4">
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                  <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                </div>
+                <p className="text-foreground-soft mb-4 italic">
+                  "As an educator, these assessments help me understand my students better and adapt my teaching methods."
+                </p>
+                <div className="font-semibold text-heading">Dr. Emily Johnson</div>
+                <div className="text-sm text-foreground-soft">Professor, Stanford University</div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+
+      <Footer />
     </div>
   );
 };

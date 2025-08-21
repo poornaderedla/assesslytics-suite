@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Search, Menu, X, BookOpen, TrendingUp, User, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,27 +31,34 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-6">
             {navCategories.map((category) => (
-              <button
+              <Link
                 key={category.name}
+                to={`/${category.name.toLowerCase()}`}
                 className="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-muted transition-colors"
               >
                 <span className="text-sm font-medium text-foreground">{category.name}</span>
                 <Badge className={`text-xs ${category.color}`}>{category.count}</Badge>
-              </button>
+              </Link>
             ))}
           </div>
 
           {/* Right Actions */}
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="sm" className="hidden md:flex">
-              <TrendingUp className="w-4 h-4 mr-2" />
-              Trending
+            <Button variant="ghost" size="sm" className="hidden md:flex" asChild>
+              <Link to="/trending">
+                <TrendingUp className="w-4 h-4 mr-2" />
+                Trending
+              </Link>
             </Button>
-            <Button variant="ghost" size="sm">
-              <User className="w-4 h-4" />
+            <Button variant="ghost" size="sm" asChild>
+              <Link to="/login">
+                <User className="w-4 h-4" />
+              </Link>
             </Button>
-            <Button variant="ghost" size="sm">
-              <Settings className="w-4 h-4" />
+            <Button variant="ghost" size="sm" asChild>
+              <Link to="/settings">
+                <Settings className="w-4 h-4" />
+              </Link>
             </Button>
 
             {/* Mobile Menu Toggle */}
@@ -70,13 +78,14 @@ const Navigation = () => {
           <div className="md:hidden py-4 border-t border-border">
             <div className="grid grid-cols-2 gap-3">
               {navCategories.map((category) => (
-                <button
+                <Link
                   key={category.name}
+                  to={`/${category.name.toLowerCase()}`}
                   className="flex flex-col items-center p-3 rounded-lg hover:bg-muted transition-colors"
                 >
                   <span className="text-sm font-medium text-foreground">{category.name}</span>
                   <Badge className={`text-xs mt-1 ${category.color}`}>{category.count}</Badge>
-                </button>
+                </Link>
               ))}
             </div>
           </div>
