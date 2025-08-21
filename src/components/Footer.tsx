@@ -2,6 +2,7 @@ import { BookOpen, Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -115,12 +116,12 @@ const Footer = () => {
               <ul className="space-y-2">
                 {quickLinks.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href} 
+                    <Link 
+                      to={link.href} 
                       className="text-foreground-soft hover:text-primary transition-colors text-sm"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -132,12 +133,12 @@ const Footer = () => {
               <ul className="space-y-2">
                 {support.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href} 
+                    <Link 
+                      to={link.href} 
                       className="text-foreground-soft hover:text-primary transition-colors text-sm"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -149,12 +150,12 @@ const Footer = () => {
               <ul className="space-y-2">
                 {company.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href} 
+                    <Link 
+                      to={link.href} 
                       className="text-foreground-soft hover:text-primary transition-colors text-sm"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -166,12 +167,12 @@ const Footer = () => {
               <ul className="space-y-2">
                 {legal.map((link) => (
                   <li key={link.name}>
-                    <a 
-                      href={link.href} 
+                    <Link 
+                      to={link.href} 
                       className="text-foreground-soft hover:text-primary transition-colors text-sm"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
