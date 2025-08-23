@@ -2,7 +2,7 @@ export interface Assessment {
   id: string;
   title: string;
   description: string;
-  category: "Education" | "Health" | "Business" | "Personal";
+  category: "Education" | "Health" | "Business" | "Personal" | "Technology" | "Finance" | "Marketing" | "Leadership" | "Communication" | "Creativity" | "Psychology" | "Relationships" | "Career" | "Fitness" | "Nutrition" | "Mental Health" | "Productivity" | "Innovation" | "Entrepreneurship" | "Sales" | "Customer Service" | "Project Management" | "Data Analysis" | "Design" | "Writing" | "Language" | "Music" | "Art" | "Sports";
   duration: string;
   difficulty: "Beginner" | "Intermediate" | "Advanced";
   completions: number;
@@ -147,4 +147,123 @@ export const sampleAssessments: Assessment[] = [
     rating: 4.3,
     tags: ["Digital Learning", "Technology Skills", "Online Education", "Self-Directed Learning"],
   },
+  // Technology Assessments
+  {
+    id: "13",
+    title: "Programming Aptitude Test",
+    description: "Evaluate your logical thinking and problem-solving skills for software development careers.",
+    category: "Technology",
+    duration: "25-30 min",
+    difficulty: "Intermediate",
+    completions: 89000,
+    rating: 4.7,
+    tags: ["Programming", "Logic", "Problem Solving", "Software Development"],
+    featured: true,
+  },
+  {
+    id: "14",
+    title: "Digital Literacy Assessment",
+    description: "Measure your proficiency with digital tools, online safety, and modern technology usage.",
+    category: "Technology",
+    duration: "15-20 min",
+    difficulty: "Beginner",
+    completions: 156000,
+    rating: 4.5,
+    tags: ["Digital Skills", "Computer Literacy", "Online Safety", "Technology"],
+  },
+  // Finance Assessments
+  {
+    id: "15",
+    title: "Financial Literacy Quiz",
+    description: "Test your knowledge of personal finance, investing, budgeting, and financial planning fundamentals.",
+    category: "Finance",
+    duration: "18-22 min",
+    difficulty: "Intermediate",
+    completions: 78000,
+    rating: 4.6,
+    tags: ["Personal Finance", "Investing", "Budgeting", "Financial Planning"],
+  },
+  {
+    id: "16",
+    title: "Investment Risk Tolerance",
+    description: "Determine your comfort level with investment risk and get personalized portfolio recommendations.",
+    category: "Finance",
+    duration: "12-15 min",
+    difficulty: "Beginner",
+    completions: 95000,
+    rating: 4.4,
+    tags: ["Investment", "Risk Assessment", "Portfolio", "Financial Planning"],
+    featured: true,
+  },
+  // Marketing Assessments
+  {
+    id: "17",
+    title: "Digital Marketing Skills Test",
+    description: "Evaluate your knowledge of SEO, social media, content marketing, and digital advertising strategies.",
+    category: "Marketing",
+    duration: "20-25 min",
+    difficulty: "Intermediate",
+    completions: 67000,
+    rating: 4.5,
+    tags: ["Digital Marketing", "SEO", "Social Media", "Content Marketing"],
+  },
+  {
+    id: "18",
+    title: "Brand Strategy Assessment",
+    description: "Test your understanding of brand positioning, messaging, and strategic marketing concepts.",
+    category: "Marketing",
+    duration: "15-18 min",
+    difficulty: "Advanced",
+    completions: 34000,
+    rating: 4.7,
+    tags: ["Brand Strategy", "Marketing Strategy", "Brand Positioning", "Strategic Marketing"],
+  },
+  // Leadership Assessments
+  {
+    id: "19",
+    title: "Leadership Competency Evaluation",
+    description: "Assess your leadership skills across key competencies including vision, decision-making, and team motivation.",
+    category: "Leadership",
+    duration: "22-28 min",
+    difficulty: "Advanced",
+    completions: 45000,
+    rating: 4.8,
+    tags: ["Leadership Skills", "Management", "Team Leadership", "Executive Skills"],
+    featured: true,
+  },
+  {
+    id: "20",
+    title: "Conflict Resolution Style",
+    description: "Identify your approach to handling conflicts and learn strategies for effective resolution.",
+    category: "Leadership",
+    duration: "12-15 min",
+    difficulty: "Intermediate",
+    completions: 73000,
+    rating: 4.6,
+    tags: ["Conflict Resolution", "Leadership", "Communication", "Problem Solving"],
+  },
+  // Communication Assessments
+  {
+    id: "21",
+    title: "Communication Style Inventory",
+    description: "Discover your communication preferences and learn to adapt your style for different audiences.",
+    category: "Communication",
+    duration: "15-18 min",
+    difficulty: "Beginner",
+    completions: 134000,
+    rating: 4.7,
+    tags: ["Communication Style", "Interpersonal Skills", "Professional Communication", "Social Skills"],
+  },
+  {
+    id: "22",
+    title: "Public Speaking Confidence",
+    description: "Evaluate your public speaking abilities and get personalized tips for improvement.",
+    category: "Communication",
+    duration: "10-12 min",
+    difficulty: "Intermediate",
+    completions: 89000,
+    rating: 4.4,
+    tags: ["Public Speaking", "Presentation Skills", "Confidence", "Communication"],
+  },
+  // Add more assessments for remaining categories...
 ];

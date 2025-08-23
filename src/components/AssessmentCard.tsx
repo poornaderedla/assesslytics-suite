@@ -1,4 +1,4 @@
-import { Clock, Users, Star, BookOpen, Heart, Briefcase, User } from "lucide-react";
+import { Clock, Users, Star, BookOpen, Heart, Briefcase, User, Cpu, DollarSign, Megaphone, Crown, MessageCircle, Palette, Brain, Users2, Target, Dumbbell, Apple, Shield, Zap, Lightbulb, ShoppingCart, Phone, Clipboard, BarChart, Paintbrush, PenTool, Globe, Music, Image, Trophy } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -6,7 +6,7 @@ interface AssessmentCardProps {
   id: string;
   title: string;
   description: string;
-  category: "Education" | "Health" | "Business" | "Personal";
+  category: "Education" | "Health" | "Business" | "Personal" | "Technology" | "Finance" | "Marketing" | "Leadership" | "Communication" | "Creativity" | "Psychology" | "Relationships" | "Career" | "Fitness" | "Nutrition" | "Mental Health" | "Productivity" | "Innovation" | "Entrepreneurship" | "Sales" | "Customer Service" | "Project Management" | "Data Analysis" | "Design" | "Writing" | "Language" | "Music" | "Art" | "Sports";
   duration: string;
   difficulty: "Beginner" | "Intermediate" | "Advanced";
   completions: number;
@@ -32,6 +32,31 @@ const AssessmentCard = ({
       case "Health": return <Heart className="w-4 h-4" />;
       case "Business": return <Briefcase className="w-4 h-4" />;
       case "Personal": return <User className="w-4 h-4" />;
+      case "Technology": return <Cpu className="w-4 h-4" />;
+      case "Finance": return <DollarSign className="w-4 h-4" />;
+      case "Marketing": return <Megaphone className="w-4 h-4" />;
+      case "Leadership": return <Crown className="w-4 h-4" />;
+      case "Communication": return <MessageCircle className="w-4 h-4" />;
+      case "Creativity": return <Palette className="w-4 h-4" />;
+      case "Psychology": return <Brain className="w-4 h-4" />;
+      case "Relationships": return <Users2 className="w-4 h-4" />;
+      case "Career": return <Target className="w-4 h-4" />;
+      case "Fitness": return <Dumbbell className="w-4 h-4" />;
+      case "Nutrition": return <Apple className="w-4 h-4" />;
+      case "Mental Health": return <Shield className="w-4 h-4" />;
+      case "Productivity": return <Zap className="w-4 h-4" />;
+      case "Innovation": return <Lightbulb className="w-4 h-4" />;
+      case "Entrepreneurship": return <ShoppingCart className="w-4 h-4" />;
+      case "Sales": return <Phone className="w-4 h-4" />;
+      case "Customer Service": return <Users className="w-4 h-4" />;
+      case "Project Management": return <Clipboard className="w-4 h-4" />;
+      case "Data Analysis": return <BarChart className="w-4 h-4" />;
+      case "Design": return <Paintbrush className="w-4 h-4" />;
+      case "Writing": return <PenTool className="w-4 h-4" />;
+      case "Language": return <Globe className="w-4 h-4" />;
+      case "Music": return <Music className="w-4 h-4" />;
+      case "Art": return <Image className="w-4 h-4" />;
+      case "Sports": return <Trophy className="w-4 h-4" />;
       default: return <BookOpen className="w-4 h-4" />;
     }
   };
@@ -42,6 +67,31 @@ const AssessmentCard = ({
       case "Health": return "bg-secondary-soft text-secondary border-secondary/20";
       case "Business": return "bg-highlight-soft text-highlight border-highlight/20";
       case "Personal": return "bg-muted text-muted-foreground border-border";
+      case "Technology": return "bg-blue-50 text-blue-600 border-blue-200";
+      case "Finance": return "bg-green-50 text-green-600 border-green-200";
+      case "Marketing": return "bg-orange-50 text-orange-600 border-orange-200";
+      case "Leadership": return "bg-purple-50 text-purple-600 border-purple-200";
+      case "Communication": return "bg-teal-50 text-teal-600 border-teal-200";
+      case "Creativity": return "bg-pink-50 text-pink-600 border-pink-200";
+      case "Psychology": return "bg-indigo-50 text-indigo-600 border-indigo-200";
+      case "Relationships": return "bg-rose-50 text-rose-600 border-rose-200";
+      case "Career": return "bg-amber-50 text-amber-600 border-amber-200";
+      case "Fitness": return "bg-red-50 text-red-600 border-red-200";
+      case "Nutrition": return "bg-lime-50 text-lime-600 border-lime-200";
+      case "Mental Health": return "bg-emerald-50 text-emerald-600 border-emerald-200";
+      case "Productivity": return "bg-yellow-50 text-yellow-600 border-yellow-200";
+      case "Innovation": return "bg-cyan-50 text-cyan-600 border-cyan-200";
+      case "Entrepreneurship": return "bg-violet-50 text-violet-600 border-violet-200";
+      case "Sales": return "bg-fuchsia-50 text-fuchsia-600 border-fuchsia-200";
+      case "Customer Service": return "bg-sky-50 text-sky-600 border-sky-200";
+      case "Project Management": return "bg-slate-50 text-slate-600 border-slate-200";
+      case "Data Analysis": return "bg-zinc-50 text-zinc-600 border-zinc-200";
+      case "Design": return "bg-stone-50 text-stone-600 border-stone-200";
+      case "Writing": return "bg-neutral-50 text-neutral-600 border-neutral-200";
+      case "Language": return "bg-gray-50 text-gray-600 border-gray-200";
+      case "Music": return "bg-pink-100 text-pink-700 border-pink-300";
+      case "Art": return "bg-purple-100 text-purple-700 border-purple-300";
+      case "Sports": return "bg-orange-100 text-orange-700 border-orange-300";
       default: return "bg-muted text-muted-foreground border-border";
     }
   };
