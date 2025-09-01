@@ -3,6 +3,9 @@ import SearchSection from "@/components/SearchSection";
 import FeaturedSection from "@/components/FeaturedSection";
 import AssessmentCard from "@/components/AssessmentCard";
 import Footer from "@/components/Footer";
+import EnhancedHero from "@/components/EnhancedHero";
+import CategoryShowcase from "@/components/CategoryShowcase";
+import TrustSection from "@/components/TrustSection";
 import { sampleAssessments } from "@/data/assessments";
 import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
@@ -37,99 +40,11 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-subtle">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-heading mb-6">
-              Discover Your <span className="text-primary">True Potential</span>
-            </h1>
-            <p className="text-xl text-foreground-soft max-w-3xl mx-auto mb-8">
-              Access over 300 scientifically-backed assessments designed by leading psychologists 
-              and researchers. From personality insights to career guidance, unlock personalized 
-              recommendations that drive real results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="px-8 py-3 text-lg">
-                Start Your Journey
-              </Button>
-              <Button variant="outline" size="lg" className="px-8 py-3 text-lg">
-                Explore Assessments
-              </Button>
-            </div>
-            
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap justify-center items-center gap-8 text-foreground-soft">
-              <div className="flex items-center gap-2">
-                <Award className="w-5 h-5 text-primary" />
-                <span className="text-sm font-medium">2M+ Users Worldwide</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-primary" />
-                <span className="text-sm font-medium">ISO 27001 Certified</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-primary" />
-                <span className="text-sm font-medium">25+ Scientific Publications</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Globe className="w-5 h-5 text-primary" />
-                <span className="text-sm font-medium">120+ Countries</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Social Proof Section */}
-      <section className="py-16 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-heading mb-4">
-              Trusted by Leading Organizations
-            </h2>
-            <p className="text-lg text-foreground-soft">
-              Universities, Fortune 500 companies, and healthcare providers rely on our assessments
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-lg mx-auto mb-2 flex items-center justify-center">
-                <span className="text-white font-bold text-lg">MIT</span>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-secondary rounded-lg mx-auto mb-2 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Stanford</span>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-lg mx-auto mb-2 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Harvard</span>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-secondary rounded-lg mx-auto mb-2 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Google</span>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-primary rounded-lg mx-auto mb-2 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Microsoft</span>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-secondary rounded-lg mx-auto mb-2 flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Mayo</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
+      <EnhancedHero />
+      <CategoryShowcase />
       <SearchSection />
       <FeaturedSection />
+      <TrustSection />
       
       {/* Assessment Grid Section */}
       <div className="py-12 px-4">
