@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import EnhancedHero from "@/components/EnhancedHero";
 import CategoryShowcase from "@/components/CategoryShowcase";
 import TrustSection from "@/components/TrustSection";
+import HomepageFAQ from "@/components/HomepageFAQ";
+import FloatingHelp from "@/components/FloatingHelp";
 import { sampleAssessments } from "@/data/assessments";
 import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
@@ -45,6 +47,7 @@ const Index = () => {
       <SearchSection />
       <FeaturedSection />
       <TrustSection />
+      <HomepageFAQ />
       
       {/* Assessment Grid Section */}
       <div className="py-12 px-4">
@@ -262,6 +265,7 @@ const Index = () => {
       </div>
 
       <Footer />
+      <FloatingHelp />
     </div>
   );
 };

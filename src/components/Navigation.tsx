@@ -73,6 +73,11 @@ const navCategories = [
           {/* Right Actions */}
           <div className="flex items-center space-x-4">
             <Button variant="ghost" size="sm" className="hidden md:flex" asChild>
+              <Link to="/faq">
+                Help
+              </Link>
+            </Button>
+            <Button variant="ghost" size="sm" className="hidden md:flex" asChild>
               <Link to="/trending">
                 <TrendingUp className="w-4 h-4 mr-2" />
                 Trending
