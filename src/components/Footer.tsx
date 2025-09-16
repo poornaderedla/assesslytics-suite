@@ -31,7 +31,8 @@ const Footer = () => {
     { name: "Careers", href: "/careers" },
     { name: "Press Kit", href: "/press" },
     { name: "Blog", href: "/blog" },
-    { name: "Research", href: "/research" }
+    { name: "Research", href: "/research" },
+    { name: "Release Notes", href: "/release-notes" }
   ];
 
   const legal = [

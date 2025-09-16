@@ -38,6 +38,7 @@ import Careers from "./pages/Careers";
 import Team from "./pages/Team";
 import Press from "./pages/Press";
 import Research from "./pages/Research";
+import ReleaseNotes from "./pages/ReleaseNotes";
 
 const queryClient = new QueryClient();
 
@@ -82,6 +83,7 @@ const App = () => (
           <Route path="/team" element={<Team />} />
           <Route path="/press" element={<Press />} />
           <Route path="/research" element={<Research />} />
+          <Route path="/release-notes" element={<ReleaseNotes />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
